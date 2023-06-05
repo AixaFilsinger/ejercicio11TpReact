@@ -2,11 +2,11 @@ import { Container, Row } from "react-bootstrap";
 import Noticia from "./Noticia";
 
 
-const ListaNoticias = () => {
+const ListaNoticias = ({noticias}) => {
     return (
         <Container>
             <Row>
-                <Noticia></Noticia>
+              { noticias.map((noticia, indice)=>( <Noticia key={indice} noticias={noticia}></Noticia>)) }
             </Row>
         </Container>
     );
